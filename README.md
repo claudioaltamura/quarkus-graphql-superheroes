@@ -4,6 +4,13 @@
 
 # quarkus-graphql-superheroes project
 
+### GraphQL schema
+
+    http://localhost:8080/graphql/schema.graphql
+
+## GraphQL tool
+    http://localhost:8080/q/graphql-ui/
+
 ## graphql queries
 
 allCities
