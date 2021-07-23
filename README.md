@@ -57,6 +57,24 @@ getCity with super heroes
         }
     }
 
+mutation
+
+    mutation {
+            createSuperhero(superhero: {
+            name: "Name", 
+            city: {
+                name: "City",
+                symbol: "CTY"
+            }
+            }) {
+            name
+            city {
+                name
+                symbol
+            }
+        }
+    }
+
 ## Running the application in dev mode
 
 You can run your application in dev mode that enables live coding using:
