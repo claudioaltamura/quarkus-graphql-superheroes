@@ -51,6 +51,7 @@ public class SuperheroService {
 
 	public void addSuperhero(Superhero superhero) {
 		superheroes.add(superhero);
+		cities.add(superhero.getCity());
 	}
 
 	public Superhero deleteSuperhero(int id) {

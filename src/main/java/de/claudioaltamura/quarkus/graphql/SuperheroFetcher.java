@@ -12,7 +12,7 @@ import org.eclipse.microprofile.graphql.Query;
 import org.eclipse.microprofile.graphql.Source;
 
 @GraphQLApi
-public class SuperheroResource {
+public class SuperheroFetcher {
 
 	@Inject
 	SuperheroService superheroService;
