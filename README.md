@@ -8,6 +8,13 @@
 
     http://localhost:8080/graphql/schema.graphql
 
+## curl example
+
+    curl --request POST \
+    --url http://localhost:8080/graphql \
+    --header 'Content-Type: application/json' \
+    --data '{"query":"    {\n        allCities {\n            name\n        }\n    }"}'
+
 ## GraphQL tool
     http://localhost:8080/q/graphql-ui/
 
