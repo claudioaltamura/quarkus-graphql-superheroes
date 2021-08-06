@@ -1,4 +1,4 @@
-package de.claudioaltamura.quarkus.graphql;
+package de.claudioaltamura.quarkus.graphql.supeheroes.web;
 
 import java.util.List;
 
@@ -6,13 +6,16 @@ import javax.inject.Inject;
 
 import org.eclipse.microprofile.graphql.Description;
 import org.eclipse.microprofile.graphql.GraphQLApi;
-import org.eclipse.microprofile.graphql.Mutation;
 import org.eclipse.microprofile.graphql.Name;
 import org.eclipse.microprofile.graphql.Query;
 import org.eclipse.microprofile.graphql.Source;
 
+import de.claudioaltamura.quarkus.graphql.supeheroes.service.SuperheroService;
+import de.claudioaltamura.quarkus.graphql.supeheroes.model.City;
+import de.claudioaltamura.quarkus.graphql.supeheroes.model.Superhero;
+
 @GraphQLApi
-public class SuperheroFetcher {
+public class SuperheroResolver {
 
 	@Inject
 	SuperheroService superheroService;
@@ -29,7 +32,7 @@ public class SuperheroFetcher {
 		return superheroService.getCity(id);
 	}
 
-	@Query
+	@Query("allSuperheroes")
 	@Description("Get all superheroes.")
 	public List<Superhero> getAllSuperheroes() {
 		return superheroService.getAllSuperheroes();
@@ -39,13 +42,6 @@ public class SuperheroFetcher {
 	@Description("Get a super hero.")
 	public Superhero getSuperhero(@Name("heroId") int id) {
 		return superheroService.getSuperhero(id);
-	}
-
-	@Mutation
-	public Superhero createSuperhero(@Name("superhero") SuperheroInput superheroInput) {
-		var superhero = new Superhero(superheroInput.getName(), superheroInput.getCity());
-		superheroService.addSuperhero(superhero);
-		return superhero;
 	}
 
 	public List<Superhero> superheroes(@Source City city) {

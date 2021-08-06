@@ -1,4 +1,4 @@
-package de.claudioaltamura.quarkus.graphql;
+package de.claudioaltamura.quarkus.graphql.supeheroes.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

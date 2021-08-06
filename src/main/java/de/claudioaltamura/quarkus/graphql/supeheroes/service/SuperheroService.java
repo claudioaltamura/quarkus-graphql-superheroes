@@ -1,10 +1,13 @@
-package de.claudioaltamura.quarkus.graphql;
+package de.claudioaltamura.quarkus.graphql.supeheroes.service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 import javax.enterprise.context.ApplicationScoped;
+
+import de.claudioaltamura.quarkus.graphql.supeheroes.model.City;
+import de.claudioaltamura.quarkus.graphql.supeheroes.model.Superhero;
 
 @ApplicationScoped
 public class SuperheroService {
@@ -20,7 +23,7 @@ public class SuperheroService {
 		var batman = new Superhero("Batman", gothamCity);
 		superheroes.add(batman);
 
-		var newYorkCity = new City("New York", "NYC");
+		var newYorkCity = new City("New York City", "NYC");
 		cities.add(newYorkCity);
 
 		var spiderMan = new Superhero("Spider Man", newYorkCity);
