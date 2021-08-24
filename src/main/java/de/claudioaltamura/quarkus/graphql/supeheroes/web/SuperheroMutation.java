@@ -11,7 +11,7 @@ import de.claudioaltamura.quarkus.graphql.supeheroes.model.SuperheroInput;
 import de.claudioaltamura.quarkus.graphql.supeheroes.service.SuperheroService;
 
 @GraphQLApi
-public class SuperHeroMutation {
+public class SuperheroMutation {
 
 	@Inject
 	SuperheroService superheroService;

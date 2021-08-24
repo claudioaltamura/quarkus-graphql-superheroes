@@ -13,7 +13,7 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
 @QuarkusTest
-public class SuperHeroTest {
+public class SuperheroTest {
 
 	@Test
 	void allCities() {
