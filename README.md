@@ -55,7 +55,7 @@ getSuperHero
 getCity with super heroes
 
     query getCity {
-        city(cityId: 1) {
+        city(cityId: 0) {
             name
             symbol
             superheroes {
