@@ -46,8 +46,8 @@ allSuperheroes
 
 getSuperHero
 
-    query getSuperHero {
-        superHero(heroId: 0) {
+    query getSuperhero {
+        superhero(heroId: 0) {
             name
         }
     }
@@ -67,13 +67,7 @@ getCity with super heroes
 mutation
 
     mutation {
-            createSuperhero(superhero: {
-            name: "Name", 
-            city: {
-                name: "City",
-                symbol: "CTY"
-            }
-            }) {
+        createSuperhero(superhero: {name: "Name", city: {name: "City", symbol: "CTY"}}) {
             name
             city {
                 name
